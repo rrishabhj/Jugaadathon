@@ -1,0 +1,70 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="hjkl.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no" />
+</head>
+<body>
+<div class="container">
+  <form id="contact" action="mainpost.php" method="post">
+    <div class="bgimg"><h3 align="center">Hospitalisation form</h3>
+    <button name="qrscan" type="button" id="qrscan" onclick="scanQr()" data-submit="...Sending">Scan QR code</button>
+   </div>
+<br>
+   <br>
+    <fieldset>
+     <input id="uid" placeholder="User ID" type="text" name="uid" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input id="name" placeholder="Name" type="text" name="name" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <fieldset>
+     <input id="gender" placeholder="Gender" type="text" name="gender" tabindex="1" required autofocus>
+    </fieldset>
+      <fieldset>
+      <input id="dob" placeholder="DOB" type="text" name="dob" tabindex="1" required autofocus>
+ <fieldset>
+      <input id="rel" placeholder="Relation" type="text" name="rel" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input id="add" placeholder="Address" type="text" name="add" tabindex="3" required autofocus>
+    </fieldset>
+        <fieldset>
+      <textarea id="ps" placeholder="Patient Status" name="ps" tabindex="3" required></textarea>
+    </fieldset>
+   <fieldset>
+      <textarea id="sym" placeholder="Symptoms" name="sym" tabindex="5" required></textarea>
+    </fieldset>
+<fieldset>
+      <textarea id="pm" placeholder="Prescribed Medicines" name="pm" tabindex="5" required></textarea>
+    </fieldset>
+
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+
+  </form>
+</div>
+</body>
+</html>
+ <script type="text/javascript">
+
+
+function scanQr(){
+   Android.scan();
+}
+
+function autoFill(obj){
+document.getElementById("uid").value= obj.uid;
+document.getElementById("name").value= obj.nam;
+if (obj.gender=="M") {
+  document.getElementById("gender").value= "MALE";
+}else {
+  document.getElementById("gender").value= "FEMALE";
+}
+document.getElementById("dob").value= obj.dob;
+document.getElementById("rel").value= obj.co;
+document.getElementById("add").value= obj.house + obj.loc + obj.subdist + obj.state ;
+}
+
+</script>

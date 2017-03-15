@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>Example</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
+	</head>
+	<body>
+
+		<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+		<p id="container"> hello </p>
+
+<script type="text/javascript">
+    function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+	function androidFunc(){
+		document.getElementById("container").innerHTML = "Android";
+	}
+</script>
+
+	</body>
+</html>

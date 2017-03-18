@@ -1,6 +1,6 @@
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="display.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
   <meta name="viewport" content="width=device-width, user-scalable=no" />
 </head>
 <body>
@@ -42,7 +42,7 @@
    mysqli_close($conn);
    ?>
 
-    
+
   </form>
 </div>
 </body>
